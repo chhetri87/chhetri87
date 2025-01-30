@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="login-form" class="login-form">
+            <h2>Admin Login</h2>
+            <div id="error-message" class="error-message"></div>
+            
+            <div class="input-group">
+                <i class='bx bx-user'></i>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            
+            <div class="input-group">
+                <i class='bx bx-lock-alt'></i>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+            <button type="submit" class="btn">Login</button>
+            
+            <div class="back-to-site">
+                <a href="../index.html">
+                    <i class='bx bx-arrow-back'></i>
+                    Back to Website
+                </a>
+            </div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Dipesh Bham</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="dashboard-nav">
+            <div class="admin-profile">
+                <img src="../CEO.jpg" alt="Admin">
+                <h3>Admin Panel</h3>
+            </div>
+            <ul>
+                <li class="active" data-tab="dashboard"><i class='bx bxs-dashboard'></i> Dashboard</li>
+                <li data-tab="files"><i class='bx bx-folder'></i> Files</li>
+                <li data-tab="content"><i class='bx bx-edit'></i> Edit Content</li>
+                <li data-tab="images"><i class='bx bx-image'></i> Manage Images</li>
+                <li data-tab="messages"><i class='bx bx-message-square-detail'></i> Messages</li>
+                <li data-tab="settings"><i class='bx bx-cog'></i> Settings</li>
+                <li id="logout"><i class='bx bx-log-out'></i> Logout</li>
+            </ul>
+        </nav>
+        <main class="dashboard-main">
+            <header>
+                <div class="search-bar">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class='bx bx-sun'></i>
+                </div>
+            </header>
+            
+            <!-- Dashboard Tab -->
+            <div class="dashboard-content tab-content active" id="dashboard-tab">
+                <div class="stats-grid">
+                    <div class="stat-card" data-stat="visitors">
+                        <i class='bx bx-user'></i>
+                        <h3>Visitors</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="stat-card" data-stat="messages">
+                        <i class='bx bx-message'></i>
+                        <h3>Messages</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="stat-card" data-stat="files">
+                        <i class='bx bx-folder'></i>
+                        <h3>Files</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="stat-card" data-stat="likes">
+                        <i class='bx bx-heart'></i>
+                        <h3>Likes</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list" id="activity-list">
+                        <!-- Activity items will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Files Tab -->
+            <div class="dashboard-content tab-content" id="files-tab">
+                <div class="files-container">
+                    <div class="upload-section">
+                        <h2>Upload Files</h2>
+                        <div class="upload-area" id="upload-area">
+                            <i class='bx bx-cloud-upload'></i>
+                            <p>Drag & Drop files here or</p>
+                            <input type="file" id="file-input" multiple hidden>
+                            <button class="btn" onclick="document.getElementById('file-input').click()">Browse Files</button>
+                        </div>
+                        <div class="upload-progress" id="upload-progress">
+                            <!-- Progress bars will be added here -->
+                        </div>
+                    </div>
+                    <div class="files-list">
+                        <h2>My Files</h2>
+                        <div class="files-grid" id="files-grid">
+                            <!-- File items will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages tab -->
+            <div class="dashboard-content tab-content" id="messages-tab">
+                <div class="messages-container">
+                    <h2>Messages</h2>
+                    <div class="messages-list" id="messages-list">
+                        <!-- Messages will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other tabs content -->
+            <div class="dashboard-content tab-content" id="content-tab">
+                <h2>Edit Website Content</h2>
+                <!-- Content editor will be added here -->
+            </div>
+
+            <div class="dashboard-content tab-content" id="images-tab">
+                <h2>Manage Images</h2>
+                <!-- Image gallery will be added here -->
+            </div>
+
+            <div class="dashboard-content tab-content" id="settings-tab">
+                <h2>Settings</h2>
+                <!-- Settings form will be added here -->
+            </div>
+        </main>
+    </div>
+    <script src="../js/theme.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
